@@ -1,3 +1,6 @@
+div {
+  margin: 0 auto;
+}
 .hexagon {
   position: relative;
   width: 300px;

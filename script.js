@@ -1,3 +1,4 @@
+/* the cursor */
 // Container on whom we listen mousemove
 var container = document.querySelector('.container');
 // Our cute little bee
@@ -9,6 +10,7 @@ var beeHead = document.getElementsByClassName('bee-head')[0];
 
 var lastOffsetX;
 
+/* funtion to do with moving the mouse */
 container.addEventListener('mousemove', _.throttle(function(e) {
 
   //Rotate bee in direction that mouse is moving
@@ -19,7 +21,7 @@ container.addEventListener('mousemove', _.throttle(function(e) {
   }
   lastOffsetX = e.offsetX;
 
-  // Don't let our little be go off the screen :)
+  // Don't let our little bee go off the screen :)
   if ((e.offsetY + 25) > container.offsetHeight) {
     bee.style.top = e.offsetY - 25 + 'px';
   } else {
@@ -44,5 +46,5 @@ container.addEventListener('mousemove', _.throttle(function(e) {
 function mouseStop(e) {
   beeHead.classList.add('idle-head');
   beeBody.classList.add('idle-body');
-
 }
+/////////*end of cursor script*///////////////////

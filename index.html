@@ -1,24 +1,82 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="script.js"></script>
     <link rel='stylesheet' type='text/css' href='style.css'>
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Rubik|Work+Sans" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,800italic,400,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700,300,200,100,900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
     <title>THIRSTY BEE</title>
   </head>
   <body>
-    <div class="hexagon2"></div>
-    <div class="hexagon1"></div>
-    <div class="hexagon3"></div>
-    <!-- Sidebar -->
-    <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
-      <h3 class="w3-bar-item">Menu</h3>
-        <a href="#" class="w3-bar-item w3-button">Link 1</a>
-        <a href="#" class="w3-bar-item w3-button">Link 2</a>
-        <a href="#" class="w3-bar-item w3-button">Link 3</a>
-    </div>
-    <div class="hexagon"></div>
-    <ul class="w3-ul w3-card-4" style="width:50%">
-      <li>Sam</li>
-      <li>Rachel</li>
+    <header>
+      <nav role="navigation">
+      <div id="menuToggle">
+    <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+    <input type="checkbox" />
+
+    <!--
+    Some spans to act as a hamburger.
+
+    They are acting like a real hamburger,
+    not that McDonalds stuff.
+    -->
+    <span></span>
+    <span></span>
+    <span></span>
+
+    <!--
+    Too bad the menu has to be inside of the button
+    but hey, it's pure CSS magic.
+    -->
+    <ul id="menu">
+      <a href="index.html"><li>HOME</li></a>
+      <a href="about.html"><li>ABOUT</li></a>
+      <a href="#"><li>CONTACT</li></a>
     </ul>
+    </div>
+    </nav>
+      <h1> THIRSTY BEE </h1>
+    </header>
+    <h3>WELCOME TO THE THIRSTY BEE MCR BAR GUIDE</h3>
+    <br>
+    <br>
+    <ul id="categories" class="clr">
+      <li class="pusher"></li>
+    	<li>
+          <div>
+            <img src="https://media-cdn.tripadvisor.com/media/photo-o/11/7a/ab/57/winter-garden.jpg" alt=""/>
+            <h2>STYLE</h2>
+            <p>choose bar by style</p>
+        </div>
+      </li>
+        <li>
+          <div>
+            <img src="http://www.northernnoise.co.uk/wp-content/uploads/2014/05/49533810_eagulls-soup-kitchen-ged-camera-5653.jpg" alt=""/>
+            <h2>RATING</h2>
+            <p>view top rated bars</p>
+        </div>
+      </li>
+      <li>
+          <div>
+            <img src="https://www.manchesterartprints.com/wp-content/uploads/2017/02/Northern-Quarter_crop.jpg" alt=""/>
+            <h2>MAP</h2>
+            <p>choose by location</p>
+        </div>
+      </li>
+      <li>
+          <div>
+            <img src="https://static01.nyt.com/images/2016/10/02/travel/02Manchester2/02Manchester2-master675.jpg" alt=""/>
+            <h2>SUBMIT REVIEW</h2>
+            <p>tell us what you think</p>
+        </div>
+      </li>
+    </ul>
+    <br>
+    <br>
   </body>
 </html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="dist/css/bootstrap.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Rubik|Work+Sans" rel="stylesheet">
+
+</head>
+<body>
+  <header>
+    <nav role="navigation">
+     <div id="menuToggle">
+      <input type="checkbox" />
+       <span></span>
+       <span></span>
+       <span></span>
+      <ul id="menu">
+        <a href="index.html"><li>HOME</li></a>
+        <a href="about.html"><li>ABOUT</li></a>
+        <a href="#"><li>CONTACT</li></a>
+      </ul>
+     </div>
+    </nav>
+    <h1> THIRSTY BEE </h1>
+  </header>
+  <h3>BEST BARS BY LOCATION</h3>
+  <div id="map" class="center-div" style="height: 600px; width: 900px;" align="center">
+</div>
+<script type="text/javascript">
+    var locations = [
+      ['Bondi Beach', 53.485539, -2.235233, 4],
+      ['Coogee Beach', 53.484120, -2.234268, 5],
+      ['Cronulla Beach', 53.486801, -2.240898, 3],
+      ['Manly Beach', 53.480292, -2.241431, 2],
+      ['Maroubra Beach', 53.479934, -2.249456, 1]
+    ];
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 10,
+      center: new google.maps.LatLng(53.485539, -2.235233),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+  </script>
+</body>
+</html>

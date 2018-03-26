@@ -1,3 +1,4 @@
+$('#plzwork').affix({ offset: { top: 100, bottom: function () { return (this.bottom = $('.footer').outerHeight(true)) } } })
 /* the cursor */
 // Container on whom we listen mousemove
 var container = document.querySelector('.container');

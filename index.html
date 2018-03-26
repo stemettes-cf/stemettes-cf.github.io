@@ -3,38 +3,47 @@
   <head>
     <script src="script.js"></script>
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' rel='stylesheet'>
+    <link href="css/logo-nav.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' type='text/css' href='style.css'>
     <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Rubik|Work+Sans" rel="stylesheet">
     <title>THIRSTY BEE</title>
   </head>
   <body>
-    <div data-spy="affix" data-offset-top="60" data-offset-bottom="200" id="plzwork">
-      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle-navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="index.html">
-                <img src="https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/1657112/1160/772/m1/fpnw/wm0/bee-icon-flat-01-.jpg?1473869003&s=022cf724945552c479206395eb6abcf1" width="80" height="50" class="d-inline-block align-top" alt="">
-                <h2>TB MCR</h2>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(99, 99, 99, 0.8)">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="https://cdn2.iconfinder.com/data/icons/outline-signs/350/bee-128.png" width="50" height="50" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home
+                <span class="sr-only">(current)</span>
               </a>
-            </div>
-              <div class="navbar-collapse collapse navbar-dark">
-                <ul class="nav navbar-nav navbar-right">
-                  <li class="active"><a href="index.html">Home</a></li>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Gallery</a></li>
-                  <li><a href="#">Contact</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">STYLE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">RATING</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="location.html">LOCATION</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="RATING"></a>
+            </li>
+          </ul>
+        </div>
       </div>
+    </nav>
     <div class="container">
       <div class="row">
         <div class="col">
@@ -47,32 +56,33 @@
     <br>
     <ul id="categories" class="clr">
       <li class="pusher"></li>
-    	<li>
+    	<li class="hexcontent">
           <div>
             <img src="https://media-cdn.tripadvisor.com/media/photo-o/11/7a/ab/57/winter-garden.jpg" alt=""/>
             <h2>STYLE</h2>
             <p>choose bar by style</p>
         </div>
       </li>
-        <li>
+        <li class="hexcontent">
           <div>
             <img src="http://www.northernnoise.co.uk/wp-content/uploads/2014/05/49533810_eagulls-soup-kitchen-ged-camera-5653.jpg" alt=""/>
             <h2>RATING</h2>
             <p>view top rated bars</p>
         </div>
       </li>
-       <li>
+       <li class="hexcontent">
           <div>
           <img src="https://www.manchesterartprints.com/wp-content/uploads/2017/02/Northern-Quarter_crop.jpg" alt=""/>
             <h2>MAP</h2>
             <p>choose by location</p>
         </div></a>
        </li>
-      <li>
+       <li class="hexcontent">
           <div>
             <img src="https://static01.nyt.com/images/2016/10/02/travel/02Manchester2/02Manchester2-master675.jpg" alt=""/>
             <h2>SUBMIT REVIEW</h2>
             <p>tell us what you think</p>
+          </li>
         </div>
       </div>
     <br>

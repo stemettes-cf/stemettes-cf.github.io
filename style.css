@@ -8,7 +8,7 @@ h1 {
   color: #48D1CC;
   font-size: 80px;
   margin: 10px 20px 20px 0px;
-  padding-top: 10px;
+  padding-top: 40px;
 }
 h2 {
   font-family: 'Rubik', sans-serif;
@@ -22,33 +22,22 @@ h3 {
   text-align: center;
   font-size: 20px;
 }
-span {
-  font-family: 'Bungee Shade', cursive;
-  font-size: 20px;
-  text-decoration: none;
-  color: black;
-}
+
 p {
   font-family: 'Rubik', sans-serif;
   color: white;
   text-align: center;
   font-size: 15px;
 }
-.affix {
-     position: fixed;
-     top: 0;
-     width: 100%;
-     z-index: 9999 !important;
-     padding-top: 10px;
- }
 
 /*the hexagons*/
 body{
-  font-family: 'Rubik', sans-serif;
-  background: ##e6fff2;
+  font-family: 'Open Sans', arial, sans-serif;
+  background:rgb(123, 158, 158);
+
 }
 *{
-  margin: 0;
+  margin:0;
   padding:0;
 }
 #categories{
@@ -64,7 +53,7 @@ body{
 #categories li{
   position:relative;
   list-style-type:none;
-  width:28.85714285714286%; /* = (100-2.5) / 3.5 */
+  width:27.85714285714286%; /* = (100-2.5) / 3.5 */
   padding-bottom: 32.16760145166612%; /* =  width /0.866 */
   float:left;
   overflow:hidden;
@@ -99,7 +88,7 @@ body{
   width:100%;
   height:100%;
   text-align:center;
-  color: black;
+  color:#fff;
   overflow:hidden;
 
   -webkit-transform: skewY(-30deg) rotate(60deg);
@@ -109,6 +98,7 @@ body{
 	-webkit-backface-visibility:hidden;
 
 }
+
 /* HEX CONTENT */
 #categories li img{
   left:-100%; right:-100%;
@@ -117,10 +107,10 @@ body{
 }
 
 #categories div h2, #categories div p{
-  width:100%;
-  padding:0 10%;
+  width:90%;
+  padding:0 5%;
   background-color:#008080; background-color: rgba(0, 128, 128, 0.8);
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Raleway', sans-serif;
 
   -webkit-transition: top .2s ease-out, bottom .2s ease-out, .2s padding .2s ease-out;
   -ms-transition: top .2s ease-out, bottom .2s ease-out, .2s padding .2s ease-out;
@@ -128,6 +118,7 @@ body{
 }
 #categories li h2{
   bottom:110%;
+  font-style:italic;
   font-weight:normal;
   font-size:1.5em;
   padding-top:100%;
@@ -148,6 +139,7 @@ body{
 	top:110%;
 	padding-bottom:50%;
 }
+
 
 /* HOVER EFFECT  */
 
@@ -188,23 +180,6 @@ body{
 }
 #fork:hover:before {
   transform: translateX(0) skewX(-45deg);
-}
-@media (max-width: 600px) {
-  h1 {
-    font-size: 50px;
-    margin-top: 20px;
-  }
-  h2 {
-    font-size: 5px;
-  }
-  h3 {
-    font-size: 15px;
-    margin-top: 30px;
-  }
-  p {
-    font-size: 10px;
-  }
-}
 }
 /*the hexagons*/
 

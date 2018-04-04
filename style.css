@@ -8,7 +8,7 @@ h1 {
   color: #48D1CC;
   font-size: 80px;
   margin: 10px 20px 20px 0px;
-  padding-top: 40px;
+  padding-top: 30px;
 }
 h2 {
   font-family: 'Rubik', sans-serif;
@@ -22,19 +22,125 @@ h3 {
   text-align: center;
   font-size: 20px;
 }
-
 p {
   font-family: 'Rubik', sans-serif;
   color: white;
   text-align: center;
   font-size: 15px;
 }
+.nav-links {
+  text-align: right;
+}
+/* navbar */
+* {
+  box-sizing: border-box;
+}
 
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: white;
+  position: relative;
+  padding-top: none;
+  color: black;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: black;
+  padding: 10px 10px 10px 10px;
+  font-family: 'Bungee Shade', cursive;
+  text-decoration: none;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+  font-family: 'Rubik', sans-serif;
+  color: black;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) + .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked + .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
 /*the hexagons*/
-body{
-  font-family: 'Open Sans', arial, sans-serif;
-  background:rgb(123, 158, 158);
+.hexagon-wrapper {
+text-align: center;
+margin: 20px;
+position: relative;
+display: inline-block;
+}
 
+body{
+  font-family: 'Rubik', sans-serif;
+  background:rgb(123, 158, 158);
 }
 *{
   margin:0;
@@ -98,7 +204,6 @@ body{
 	-webkit-backface-visibility:hidden;
 
 }
-
 /* HEX CONTENT */
 #categories li img{
   left:-100%; right:-100%;
@@ -110,7 +215,7 @@ body{
   width:90%;
   padding:0 5%;
   background-color:#008080; background-color: rgba(0, 128, 128, 0.8);
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Rubik', sans-serif;
 
   -webkit-transition: top .2s ease-out, bottom .2s ease-out, .2s padding .2s ease-out;
   -ms-transition: top .2s ease-out, bottom .2s ease-out, .2s padding .2s ease-out;
@@ -139,18 +244,16 @@ body{
 	top:110%;
 	padding-bottom:50%;
 }
-
-
 /* HOVER EFFECT  */
 
 #categories li div:hover h2 {
   bottom:50%;
-  padding-bottom:10%;
+  padding-bottom:0%;
 }
 
 #categories li div:hover p{
   top:50%;
-  padding-top:10%;
+  padding-top:0%;
 }
 #fork{
   position:fixed;
@@ -181,7 +284,7 @@ body{
 #fork:hover:before {
   transform: translateX(0) skewX(-45deg);
 }
-/*the hexagons*/
+/*end of the hexagons*/
 
 /* THE SLIDESHOW STUFF GOES HERE*/
 

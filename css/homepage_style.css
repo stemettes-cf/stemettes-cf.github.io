@@ -13,7 +13,6 @@ body {
 .wrapper {
   width: 100%;
   overflow: hidden;
-  padding-top: none;
   padding-bottom: 300px;
   min-height: 100%;
 }
@@ -24,7 +23,6 @@ h1 {
   font-size: 80px;
   margin: 10px 20px 20px 0px;
   padding-top: 30px;
-  padding-bottom: none;
 }
 h2 {
   font-family: 'Rubik', sans-serif;
@@ -140,51 +138,4 @@ p {
   h1, h2 {
     width: 0 auto;
   }
-}
-
-
-/*the cursor*/
-.container {
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
-body, a:hover {cursor: url(http://cur.cursors-4u.net/food/foo-7/foo635.cur), progress !important;}
-/* the cursor*/
-
-/*carousel functions*/
-.carousel-inner img {
-	width:100%;
-  	height:100%;
-}
-
-#myCarousel {
-	font-size:90%;
-}
-
-.carousel-controls-mini {
-
-}
-
-.carousel-controls-mini > a {
-	border:1px solid #eee;
-  	width:20px;
-    display:block;
-    float:left;
-    text-align:center;
-}
-/*carousel functions*/
-
-/*map centering*/
-body {
-  padding: 0px;
-  background-color: #fcfcfc;
-}
-.center-div {
-  margin: 0 auto;
-  width: 100px;
-  height: 100px;
-  background-color: #ccc;
-  border-radius: 3px;
 }

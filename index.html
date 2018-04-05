@@ -1,11 +1,16 @@
 <!doctype html>
 
-<html lang="en" ng-app="app" ng-controller="AppController as app" >
+<html
+  lang="en"
+  ng-app="app"
+  ng-controller="AppController as app" >
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>THIRSTY BEE</title>
+
   <!-- Load Google fonts -->
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <!-- Load Bootstrap -->
@@ -26,18 +31,23 @@
       </label>
     </div>
     <input type="checkbox" id="nav-check">
-      <div class="nav-links">
-        <a href="index.html" target="_blank">HOME</a>
-        <a href="about.html" target="_blank">ABOUT</a>
-        <a href="rating.html" target="_blank">RATINGS</a>
-        <a href="style.html" target="_blank">STYLE</a>
-        <a href="location.html" target="_blank">LOCATION</a>
+    <div class="nav-links">
+      <a href="index.html" target="_blank">HOME</a>
+      <a href="about.html" target="_blank">ABOUT</a>
+      <a href="rating.html" target="_blank">RATING</a>
+      <a href="style.html" target="_blank">STYLE</a>
+      <a href="location.html" target="_blank">LOCATION</a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1 class="text-center"> THIRSTY BEE </h1>
+        <h3 class="text-center">WELCOME TO THE THIRSTY BEE MCR BAR GUIDE</h3>
       </div>
     </div>
-    <div class="container">
-        <h1 class="text-center"> THIRSTY BEE </h1>
-        <h3 class="text-center">YOUR DEFINITIVE MCR BAR GUIDE</h3>
-    </div>
+  </div>
+ </div>
  <div class="wrapper">
    <section class="hex-grid">
      <div ng-repeat="item in app.items" class="grid-item repeat-animation">
@@ -56,11 +66,11 @@
      </div><!-- /.grid-item -->
      <div ng-repeat="item in app.items" class="grid-item repeat-animation">
        <div class="inner">
-         <div class="inner-inner" ng-style="{ 'background-image': 'url(http://www.p2pfinancenews.co.uk/wp-content/uploads/2017/08/shutterstock_113350987-700x325.jpg)', 'background-size': '80%' }">
+         <div class="inner-inner" ng-style="{ 'background-image': 'url(https://previews.123rf.com/images/belchonock/belchonock1501/belchonock150108875/35887307-honeycomb-background.jpg)', 'background-size': '100%' }">
            <a ref="style.html" class="grid-info">
              <div class ="inner-text">
                <div class="inner-text-inner">
-                 <p>Welcome to the Thirsty Bee bar guide.<br>Click on our hive to learn more.</p>
+                 <p>hover over our hive to find out more</p>
                </div><!-- /.inner-text-inner -->
              </div><!-- /.inner-text -->
            </a><!-- /.grid-info -->
@@ -84,7 +94,7 @@
      <div ng-repeat="item in app.items" class="grid-item repeat-animation">
        <div class="inner">
          <div class="inner-inner" ng-style="{ 'background-image': 'url(https://www.manchesterartprints.com/wp-content/uploads/2017/02/Northern-Quarter_crop.jpg)', 'background-size': '50%' }">
-           <a href="rating.html" class="grid-info">
+           <a href="location.html" class="grid-info">
              <div class ="inner-text">
                <div class="inner-text-inner">
                  <h2>LOCATION</h2>
@@ -97,6 +107,7 @@
      </div><!-- /.grid-item -->
    </section><!-- /.hex-grid -->
  </div><!-- /.wrapper -->
+
 
  <!-- Load Angular -->
  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular.min.js"></script>

@@ -21,7 +21,7 @@ h1 {
   text-align: center;
   color: #48D1CC;
   font-size: 80px;
-  margin: 10px 20px 20px 0px;
+  margin: 0px 20px 20px 0px;
   padding-top: none;
 }
 h2 {
@@ -42,7 +42,7 @@ p {
   text-align: center;
   font-size: 20px;
 }
-.center {
+.centerbee {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -51,6 +51,7 @@ p {
     height: auto;
     size: 50%
     padding-bottom: none;
+    padding-top: 5px;
 }
 .nav-links {
   text-align: center;
@@ -62,9 +63,10 @@ p {
 
 .nav {
   height: 50px;
-  width: 100%;
+  margin: 0 auto;
+  width: 700px;
   background-color: white;
-  position: relative;
+  position: center;
   padding-top: none;
   color: black;
 }

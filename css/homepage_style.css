@@ -104,6 +104,9 @@ p {
 }
 
 @media (max-width:600px) {
+  h1 {
+    font-size: 60px;
+  }
   .nav > .nav-btn {
     display: inline-block;
     position: absolute;
@@ -146,8 +149,5 @@ p {
   .nav > #nav-check:checked + .nav-links {
     height: calc(100vh - 50px);
     overflow-y: auto;
-  }
-  h1, h2 {
-    width: 0 auto;
   }
 }

@@ -1,80 +1,161 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <script src="script.js"></script>
-    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' rel='stylesheet'>
-    <link href="css/logo-nav.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' type='text/css' href='style.css'>
-    <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Rubik|Work+Sans" rel="stylesheet">
-    <title>THIRSTY BEE</title>
-  </head>
-  <body>
-    <div class="nav">
-      <div class="nav-header">
-        <div class="nav-title">
-          TB
-        </div>
-      </div>
-      <div class="nav-btn">
-        <label for="nav-check">
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
-      </div>
-      <input type="checkbox" id="nav-check">
+<!doctype html>
+
+<html lang="en" ng-app="app" ng-controller="AppController as app" >
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>THIRSTY BEE</title>
+  <!-- Load Google fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <!-- Load Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha256-xWeRKjzyg6bep9D1AsHzUPEWHbWMzlRc84Z0aG+tyms= sha512-mGIRU0bcPaVjr7BceESkC37zD6sEccxE+RJyQABbbKNe83Y68+PyPM5nrE1zvbQZkSHDCJEtnAcodbhlq2/EkQ==" crossorigin="anonymous">
+  <!-- Load custom styles -->
+  <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Rubik|Work+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="css/hex-grid.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel='stylesheet' href='css/homepage_style.css'>
+</head>
+<body>
+  <div class="nav">
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+    <input type="checkbox" id="nav-check">
       <div class="nav-links">
         <a href="index.html" target="_blank">HOME</a>
         <a href="about.html" target="_blank">ABOUT</a>
-        <a href="location.html" target="_blank">LOCATION</a>
+        <a href="rating.html" target="_blank">RATINGS</a>
         <a href="style.html" target="_blank">STYLE</a>
-        <a href="rating.html" target="_blank">RATING</a>
+        <a href="location.html" target="_blank">LOCATION</a>
       </div>
     </div>
     <div class="container">
-      <div class="row">
-        <div class="col">
-          <h1 class="text-center"> THIRSTY BEE </h1>
-          <h3 class="text-center">WELCOME TO THE THIRSTY BEE MCR BAR GUIDE</h3>
-        </div>
-      </div>
+        <h1 class="text-center"> THIRSTY BEE </h1>
+        <h3 class="text-center">YOUR DEFINITIVE MCR BAR GUIDE</h3>
     </div>
-    <br>
-    <br>
-</div>
-    <ul id="categories" class="clr">
-      <li class="pusher"></li>
-    	<li class="hexcontent">
-          <div>
-            <img src="https://media-cdn.tripadvisor.com/media/photo-o/11/7a/ab/57/winter-garden.jpg" alt=""/>
-            <h2>STYLE</h2>
-            <p>choose bar by style</p>
-        </div>
-      </li>
-        <li class="hexcontent">
-          <div>
-            <img src="http://www.northernnoise.co.uk/wp-content/uploads/2014/05/49533810_eagulls-soup-kitchen-ged-camera-5653.jpg" alt=""/>
-            <h2>RATING</h2>
-            <p>view top rated bars</p>
-        </div>
-      </li>
-       <li class="hexcontent">
-          <div>
-          <img src="https://www.manchesterartprints.com/wp-content/uploads/2017/02/Northern-Quarter_crop.jpg" alt=""/>
-            <h2>MAP</h2>
-            <p>choose by location</p>
-        </div></a>
-       </li>
-       <li class="hexcontent">
-          <div>
-            <img src="https://static01.nyt.com/images/2016/10/02/travel/02Manchester2/02Manchester2-master675.jpg" alt=""/>
-            <h2>SUBMIT REVIEW</h2>
-            <p>tell us what you think</p>
-        </li>
-        </div>
-      </div>
-    <br>
-    <br>
-  </body>
+ <div class="wrapper">
+   <section class="hex-grid">
+     <div ng-repeat="item in app.items" class="grid-item repeat-animation">
+       <div class="inner">
+         <div class="inner-inner" ng-style="{ 'background-image': 'url(https://www.telegraph.co.uk/content/dam/Travel/hotels/europe/united-kingdom/Hotels%20-%20England/manchester/principal-manchester-winter-garden-l-xlarge.jpg)', 'background-size': '100%' }">
+           <a ref="style.html" class="grid-info">
+             <div class ="inner-text">
+               <div class="inner-text-inner">
+                 <h2>STYLE</h2>
+                 <p>choose bar by style</p>
+               </div><!-- /.inner-text-inner -->
+             </div><!-- /.inner-text -->
+           </a><!-- /.grid-info -->
+         </div><!-- /.inner-inner -->
+       </div><!-- /.inner -->
+     </div><!-- /.grid-item -->
+     <div ng-repeat="item in app.items" class="grid-item repeat-animation">
+       <div class="inner">
+         <div class="inner-inner" ng-style="{ 'background-image': 'url(http://www.p2pfinancenews.co.uk/wp-content/uploads/2017/08/shutterstock_113350987-700x325.jpg)', 'background-size': '80%' }">
+           <a ref="style.html" class="grid-info">
+             <div class ="inner-text">
+               <div class="inner-text-inner">
+                 <p>Welcome to the Thirsty Bee bar guide.<br>Click on our hive to learn more.</p>
+               </div><!-- /.inner-text-inner -->
+             </div><!-- /.inner-text -->
+           </a><!-- /.grid-info -->
+         </div><!-- /.inner-inner -->
+       </div><!-- /.inner -->
+     </div><!-- /.grid-item -->
+     <div ng-repeat="item in app.items" class="grid-item repeat-animation">
+       <div class="inner">
+         <div class="inner-inner" ng-style="{ 'background-image': 'url(http://www.camdentownbrewery.com/content/news/_820x410/cloudwater2.jpg)', 'background-size': '80%' }">
+           <a href="rating.html" class="grid-info">
+             <div class ="inner-text">
+               <div class="inner-text-inner">
+                 <h2>RATING</h2>
+                 <p>choose bar by rating</p>
+               </div><!-- /.inner-text-inner -->
+             </div><!-- /.inner-text -->
+           </a><!-- /.grid-info -->
+         </div><!-- /.inner-inner -->
+       </div><!-- /.inner -->
+     </div><!-- /.grid-item -->
+     <div ng-repeat="item in app.items" class="grid-item repeat-animation">
+       <div class="inner">
+         <div class="inner-inner" ng-style="{ 'background-image': 'url(https://www.manchesterartprints.com/wp-content/uploads/2017/02/Northern-Quarter_crop.jpg)', 'background-size': '50%' }">
+           <a href="rating.html" class="grid-info">
+             <div class ="inner-text">
+               <div class="inner-text-inner">
+                 <h2>LOCATION</h2>
+                 <p>choose bar by location</p>
+               </div><!-- /.inner-text-inner -->
+             </div><!-- /.inner-text -->
+           </a><!-- /.grid-info -->
+         </div><!-- /.inner-inner -->
+       </div><!-- /.inner -->
+     </div><!-- /.grid-item -->
+   </section><!-- /.hex-grid -->
+ </div><!-- /.wrapper -->
+
+ <!-- Load Angular -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular-animate.min.js"></script>
+ <!-- Load FakerJS -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.0.1/faker.min.js"></script>
+ <!-- Load app scripts -->
+ <script>
+   'use strict';
+
+   (function() {
+
+     /**
+      * Declares the app module.
+      */
+     angular
+       .module( 'app', [
+         'ngAnimate'
+       ]);
+
+
+     // ---------------------------------------- //
+     // ---------------------------------------- //
+
+
+     angular
+       .module( 'app' )
+       .controller( 'AppController', AppController );
+
+       AppController.$inject = [];
+
+       function AppController() {
+
+         this.items = getFakeItems();
+
+
+         /**
+          * Creates placeholder items.
+          */
+         function getFakeItems() {
+
+           var items = [];
+
+           for ( var i = 0; i < 1; i++ ) {
+             items.push({
+               name: faker.lorem.sentence(),
+               desc: faker.fake('{{name.lastName}}, {{name.firstName}} {{name.suffix}}'),
+               imgSrc: "http://placehold.it/300/09f/fff.png?text=" + i
+             });
+           }
+
+           return items;
+
+         } // end getFakeItems
+
+       } // end AppController
+
+   })(); // end module
+
+ </script>
+</body>
 </html>

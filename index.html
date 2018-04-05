@@ -34,14 +34,16 @@
     <div class="nav-links">
       <a href="index.html" target="_blank">HOME</a>
       <a href="about.html" target="_blank">ABOUT</a>
-      <a href="rating.html" target="_blank">RATING</a>
-      <a href="style.html" target="_blank">STYLE</a>
-      <a href="location.html" target="_blank">LOCATION</a>
+      <a href="style.html" target="_blank">BY STYLE</a>
+      <a href="rating.html" target="_blank">BY RATING</a>
+      <a href="location.html" target="_blank">BY MAP</a>
+      <a href="area.html" target="_blank">BY AREA</a>
     </div>
   </div>
   <div class="container">
     <div class="row">
       <div class="col">
+        <img src="https://i.pinimg.com/originals/20/8c/eb/208ceb6083285b22ae01244f34abe1a0.jpg" class="center">
         <h1 class="text-center"> THIRSTY BEE </h1>
         <h3 class="text-center">the definitive mcr bar guide</h3>
       </div>
@@ -70,7 +72,8 @@
            <a ref="style.html" class="grid-info">
              <div class ="inner-text">
                <div class="inner-text-inner">
-                 <p>hover over our hive to find out more</p>
+                 <h2>ABOUT</h2>
+                 <p>learn more about the thirsty bees</p>
                </div><!-- /.inner-text-inner -->
              </div><!-- /.inner-text -->
            </a><!-- /.grid-info -->
@@ -97,8 +100,34 @@
            <a href="location.html" class="grid-info">
              <div class ="inner-text">
                <div class="inner-text-inner">
-                 <h2>LOCATION</h2>
-                 <p>choose bar by location</p>
+                 <h2>MAP</h2>
+                 <p>explore our map of mcr</p>
+               </div><!-- /.inner-text-inner -->
+             </div><!-- /.inner-text -->
+           </a><!-- /.grid-info -->
+         </div><!-- /.inner-inner -->
+       </div><!-- /.inner -->
+     </div><!-- /.grid-item -->
+     <div ng-repeat="item in app.items" class="grid-item repeat-animation">
+       <div class="inner">
+         <div class="inner-inner" ng-style="{ 'background-image': 'url(https://brand.campaign.adidas.com/Images/us-ss17-glp-revamp-teaserlist-background-desktop_tcm56-126765.jpg?locale=pt_PT&device=desktop&version=1)', 'background-size': '50%' }">
+           <a href="location.html" class="grid-info">
+             <div class ="inner-text">
+               <div class="inner-text-inner">
+               </div><!-- /.inner-text-inner -->
+             </div><!-- /.inner-text -->
+           </a><!-- /.grid-info -->
+         </div><!-- /.inner-inner -->
+       </div><!-- /.inner -->
+     </div><!-- /.grid-item -->
+     <div ng-repeat="item in app.items" class="grid-item repeat-animation">
+       <div class="inner">
+         <div class="inner-inner" ng-style="{ 'background-image': 'url(http://www.indigoplanning.com/UploadedImages/work-northern-quarter--manchester-751e09ab.jpg)', 'background-size': '80%' }">
+           <a href="location.html" class="grid-info">
+             <div class ="inner-text">
+               <div class="inner-text-inner">
+                 <h2>BY AREA</h2>
+                 <p>browse by popular areas</p>
                </div><!-- /.inner-text-inner -->
              </div><!-- /.inner-text -->
            </a><!-- /.grid-info -->

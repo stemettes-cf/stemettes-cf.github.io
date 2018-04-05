@@ -2,7 +2,7 @@
   position: relative;
   width: 80%;
   left: 10%;
-  padding-top: 120px;
+  padding-top: 80px;
 }
 @media (max-width: 767px) {
   .hex-grid {

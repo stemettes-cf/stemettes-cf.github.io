@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html
+lang=en
+ng="app"
+ng-controller="AppController as app">
+
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
@@ -17,40 +21,43 @@
         padding: 0;
       }
     </style>
-
-  <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="script.js"></script>
-  <link rel="stylesheet" href="dist/css/bootstrap.css">
-  <link rel="stylesheet" href="stylesheetsforRatingPage.css">
-  <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Rubik|Work+Sans" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!-- Load Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha256-xWeRKjzyg6bep9D1AsHzUPEWHbWMzlRc84Z0aG+tyms= sha512-mGIRU0bcPaVjr7BceESkC37zD6sEccxE+RJyQABbbKNe83Y68+PyPM5nrE1zvbQZkSHDCJEtnAcodbhlq2/EkQ==" crossorigin="anonymous">
+    <!-- Load custom styles -->
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Rubik|Work+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/hex-grid.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel='stylesheet' href='css/homepage_style.css'>
   </head>
-  <header>
-    <!--
-    This makes the navigation bar at the top right of the screen
-    -->
-    <nav role="navigation">
-     <div id="menuToggle">
-      <input type="checkbox" />
-       <span></span>
-       <span></span>
-       <span></span>
-      <ul id="menu">
-        <a href="index.html"><li>HOME</li></a>
-        <a href="about.html"><li>ABOUT</li></a>
-        <a href="#"><li>CONTACT</li></a>
-      </ul>
-     </div>
-    </nav>
-    <!--
-    Header
-    -->
-    <h1> THIRSTY BEE </h1>
-  </header>
+  <body>
+    <div class="nav">
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+      <input type="checkbox" id="nav-check">
+      <div class="nav-links">
+        <a href="index.html" target="_blank">HOME</a>
+        <a href="about.html" target="_blank">ABOUT</a>
+        <a href="style.html" target="_blank">BY STYLE</a>
+        <a href="rating.html" target="_blank">BY RATING</a>
+        <a href="location.html" target="_blank">BY MAP</a>
+        <a href="area.html" target="_blank">BY AREA</a>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <img src="https://i.pinimg.com/originals/20/8c/eb/208ceb6083285b22ae01244f34abe1a0.jpg" class="centerbee">
+        </div>
+      </div>
+    </div>
+   </div>
+
   <body>
 
     <div id="map"></div>

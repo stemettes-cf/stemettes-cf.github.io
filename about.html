@@ -1,43 +1,65 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <script src="script.js"></script>
-    <link rel='stylesheet' type='text/css' href='style.css'>
+<html
+lang=en
+ng="app"
+ng-controller="AppController as app">
+
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Bars by location</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 80%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!-- Load Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha256-xWeRKjzyg6bep9D1AsHzUPEWHbWMzlRc84Z0aG+tyms= sha512-mGIRU0bcPaVjr7BceESkC37zD6sEccxE+RJyQABbbKNe83Y68+PyPM5nrE1zvbQZkSHDCJEtnAcodbhlq2/EkQ==" crossorigin="anonymous">
+    <!-- Load custom styles -->
     <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Rubik|Work+Sans" rel="stylesheet">
-    <title>THIRSTY BEE</title>
+    <link rel="stylesheet" href="css/hex-grid.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel='stylesheet' href='css/homepage_style.css'>
   </head>
-<body>
-  <header>
-    <nav role="navigation">
-    <div id="menuToggle">
-  <!--
-  A fake / hidden checkbox is used as click reciever,
-  so you can use the :checked selector on it.
-  -->
-  <input type="checkbox" />
+  <body>
+    <div class="nav">
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+      <input type="checkbox" id="nav-check">
+      <div class="nav-links">
+        <a href="index.html" target="_blank">HOME</a>
+        <a href="about.html" target="_blank">ABOUT</a>
+        <a href="style.html" target="_blank">BY STYLE</a>
+        <a href="rating.html" target="_blank">BY RATING</a>
+        <a href="location.html" target="_blank">BY MAP</a>
+        <a href="area.html" target="_blank">BY AREA</a>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <img src="https://i.pinimg.com/originals/20/8c/eb/208ceb6083285b22ae01244f34abe1a0.jpg" class="centerbee">
+        </div>
+      </div>
+    </div>
+   </div>
 
-  <!--
-  Some spans to act as a hamburger.
-
-  They are acting like a real hamburger,
-  not that McDonalds stuff.
-  -->
-  <span></span>
-  <span></span>
-  <span></span>
-
-  <!--
-  Too bad the menu has to be inside of the button
-  but hey, it's pure CSS magic.
-  -->
-  <ul id="menu">
-    <a href="index.html"><li>HOME</li></a>
-    <a href="about.html"><li>ABOUT</li></a>
-    <a href="#"><li>CONTACT</li></a>
-  </ul>
-  </div>
-  </nav>
-    <h1> THIRSTY BEE </h1>
-  </header>
-</body>
-</html>
+  <body>
+<h1> About us <h1/>
+   
+  </body>
+      </html>

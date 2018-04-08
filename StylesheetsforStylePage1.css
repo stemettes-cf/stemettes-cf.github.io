@@ -1,0 +1,193 @@
+header {
+  text-align: center;
+  background-size: cover;
+}
+h1 {
+  font-family: 'Bungee Shade', cursive;
+  text-align: center;
+  color: #48D1CC;
+  font-size: 50px;
+  margin: 10px 20px 20px 0px;
+}
+h2 {
+  font-family: 'Rubik', sans-serif;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+}
+h3 {
+  font-family: 'Rubik', sans-serif;
+  color: gray;
+  text-align: center;
+  font-size: 20px;
+}
+h4 {
+  font-family: 'Bungee Shade', cursive;
+  text-align: center;
+  color: #48D1CC;
+  font-size: 30px;
+  margin: 10px 20px 20px 0px;
+}
+p {
+  font-family: 'Rubik', sans-serif;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+}
+/*padding of text*/
+div.col-sm-9 {
+  padding-right:30px;
+  text-align: justify;
+  padding-left: 70px;
+}
+/*Moves body of text away from title*/
+div.row {
+  padding-top: 30px;
+  padding-bottom:30px;
+
+}
+
+div.col-sm-2 {
+margin-top:30px;
+padding-right: 50px;
+}
+/*Responsive Text*/
+
+@media screen and (max-width: 600px) {
+  .col-sm-9 {
+    padding-left: 30px;
+    text-align: justify;
+    display:block;
+    width:100%;
+    position: relative;
+  }
+}
+
+  /*Responsive Pictures*/
+  @media screen and (max-width: 1400px) {
+    .col-sm-2 {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+          width: 100px;
+          height: auto;
+          size: 50%;
+          padding-bottom: none;
+          padding-top: 5px;
+          border-width: thick;
+
+    }
+  }
+
+
+
+
+
+
+/*hexagon*/
+.hexagon1 {
+  position: relative;
+  width: 150px;
+  height: 86.60px;
+  margin: 43.30px 0;
+  background-size: auto 173.2051px;
+  background-image: url(https://i2-prod.manchestereveningnews.co.uk/incoming/article10023706.ece/ALTERNATES/s615/JS71710005.jpg);
+  background-position: center;
+}
+.hexagon2 {
+  position: relative;
+  width: 150px;
+  height: 86.60px;
+  margin: 43.30px 0;
+  background-size: auto 173.2051px;
+  background-image: url(https://www.manchesterbars.com/photos/blackdog-bararea1300.jpg);
+  background-position: center;
+}
+.hexagon3 {
+  position: relative;
+  width: 150px;
+  height: 86.60px;
+  margin: 43.30px 0;
+  background-size: auto 173.2051px;
+  background-image: url(https://img.static-bookatable.com/mr-coopers-house-and-garden-manchester-14.jpg?id=bd7919e2974f45ee05b507c9db893203.jpg&404=bat2/404-restaurant.jpg&width=600&height=400&scale=both&mode=crop);
+  background-position: center;
+}
+.hexagon4{
+  position: relative;
+  width: 150px;
+  height: 86.60px;
+  margin: 43.30px 0;
+  background-size: auto 173.2051px;
+  background-image: url(https://i1.wp.com/northernquartermanchester.com/wp-content/uploads/2014/01/Trof-Interior.jpg?w=400);
+  background-position: center;
+}
+.hexagon5 {
+  position: relative;
+  width: 150px;
+  height: 86.60px;
+  margin: 43.30px 0;
+  background-size: auto 173.2051px;
+  background-image: url(http://www.manchesterbars.com/photos/liquorstorefirststreet-outside.jpg);
+  background-position: center;
+}
+
+
+
+
+.hexTop,
+.hexBottom {
+  position: absolute;
+  z-index: 1;
+  width: 106.07px;
+  height: 106.07px;
+  overflow: hidden;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background: inherit;
+  left: 21.97px;
+}
+
+/*counter transform the bg image on the caps*/
+.hexTop:after,
+.hexBottom:after {
+  content: "";
+  position: absolute;
+  width: 150.0000px;
+  height: 86.60254037844387px;
+  -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-43.3013px);
+  -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-43.3013px);
+  transform:          rotate(45deg) scaleY(1.7321) translateY(-43.3013px);
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  background: inherit;
+}
+
+.hexTop {
+  top: -53.0330px;
+}
+
+.hexTop:after {
+  background-position: center top;
+}
+
+.hexBottom {
+  bottom: -53.0330px;
+}
+
+.hexBottom:after {
+  background-position: center bottom;
+}
+
+.hexagon:after {
+  content: "";
+  position: absolute;
+  top: 0.0000px;
+  left: 0;
+  width: 150.0000px;
+  height: 86.6025px;
+  z-index: 2;
+  background: inherit;
+}

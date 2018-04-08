@@ -60,66 +60,129 @@ ng-controller="AppController as app">
 
   <body>
 
-    <div id="map"></div>
-    <script>
+        <div id="map"></div>
+        <script>
 
-      function initMap() {
-        var myLatLng = {lat: 53.4791595, lng: -2.2441051};
-        var cottonopolis = {lat: 53.4812296, lng: -2.2334459};
-        var mojo = {lat: 53.481272, lng: -2.24981};
-        var epernay = {lat: 53.477494, lng: -2.248027};
-        var myLatLng5 = {lat: 53.5791595, lng: -2.3441051};
-        var myLatLng6 = {lat: 53.4791595, lng: -2.2941051};
-        var myLatLng7 = {lat: 53.4791595, lng: -2.3141051};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 16,
-          center: myLatLng
-        });
+          // This example displays a marker at the center of Australia.
+          // When the user clicks the marker, an info window opens.
 
-        var marker = new google.maps.Marker({
-          position: myLatLng,
-          map: map,
-          title: 'Hello World!'
-        });
-        var marker = new google.maps.Marker({
-          position: cottonopolis,
-          map: map,
-          title: 'Cottonopolis'
-        });
-        var marker = new google.maps.Marker({
-          position: mojo,
-          map: map,
-          title: 'Mojo'
-        });
-        var marker = new google.maps.Marker({
-          position: epernay,
-          map: map,
-          title: 'Epernay'
-        });
-        var marker = new google.maps.Marker({
-          position: myLatLng5,
-          map: map,
-          title: 'Hello World!'
-        });
-        var marker = new google.maps.Marker({
-          position: myLatLng6,
-          map: map,
-          title: 'Hello World again!'
-        });
-        var marker = new google.maps.Marker({
-          position: myLatLng7,
-          map: map,
-          title: 'Hello World!'
-        });
-        var marker = new google.maps.Marker({
-          position: myLatLng8,
-          map: map,
-          title: 'Hello World again!'
-        });
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIyOtZbUXTTUOhASGVucw0tj55hVPI2L8&callback=initMap">
-    </script>
-  </body>
-</html>
+          function initMap() {
+            var myLatLng = {lat: 53.4791595, lng: -2.2441051};
+            var cottonopolis = {lat: 53.4812296, lng: -2.2334459};
+            var mojo = {lat: 53.481272, lng: -2.24981};
+            var epernay = {lat: 53.477494, lng: -2.248027};
+            var hold_fast = {lat: 53.48180229999999, lng: -2.232596199999989};
+            var Australasia = {lat: 53.48016809999999, lng: -2.249796500000002};
+            var otherbar = {lat: 53.4791595, lng: -2.3141051};
+            var uluru = {lat: -25.363, lng: 131.044};
+            var test={lat: -24.263, lng: 131.944};
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 16,
+              center: myLatLng
+            });
+
+            var info_cottonopolis = '<div id="content">'+
+                                '</div>'+
+                '<h1>Cottonopolis</h1>'+
+                '<div id="bodyContent">'+
+                '<p><b>Cottonopolis</b>, a nod to our industrial past in this NQ gem </p>'+
+                '</div>';
+
+            var infowindow = new google.maps.InfoWindow({
+              content: info_cottonopolis
+            });
+
+            var marker_cottonopolis = new google.maps.Marker({
+              position: cottonopolis,
+              map: map,
+              title: 'Cottonopolis'
+            });
+            marker_cottonopolis.addListener('click', function() {
+              infowindow.open(map, marker_cottonopolis);
+            });
+            var info_mojo ='<div id="content">'+
+                                '</div>'+
+                '<h1>Mojo</h1>'+
+                '<div id="bodyContent">'+
+                '<p><b>Mojo</b>, the ultimate late night rock bar of Manchester </p>'+
+                '</div>';
+
+            var infowindow_mojo = new google.maps.InfoWindow({
+              content: info_mojo
+            });
+
+            var marker_mojo = new google.maps.Marker({
+              position: mojo,
+              map: map,
+              title: 'Mojo'
+            });
+            marker_mojo.addListener('click', function() {
+              infowindow_mojo.open(map, marker_mojo);
+            });
+
+            var info_epernay = '<div id="content">'+
+                                '</div>'+
+                '<h1>Epernay</h1>'+
+                '<div id="bodyContent">'+
+                '<p><b>Epernay</b>, a top rated champagne bar, for those seeking a fancier night </p>'+
+                '</div>';
+
+            var infowindow_epernay = new google.maps.InfoWindow({
+              content: info_epernay
+            });
+
+            var marker_epernay = new google.maps.Marker({
+              position: epernay,
+              map: map,
+              title: 'Epernay'
+            });
+            marker_epernay.addListener('click', function() {
+              infowindow_epernay.open(map, marker_epernay);
+            });
+            var info_holdfast ='<div id="content">'+
+                                '</div>'+
+                '<h1>Hold Fast</h1>'+
+                '<div id="bodyContent">'+
+                '<p><b>Hold Fast</b>, a unique spot with suprises around every corner </p>'+
+                '</div>';
+
+            var infowindow_holdfast = new google.maps.InfoWindow({
+              content: info_holdfast
+            });
+
+            var marker_holdfast = new google.maps.Marker({
+              position: hold_fast,
+              map: map,
+              title: 'Hold Fast'
+            });
+            marker_holdfast.addListener('click', function() {
+              infowindow_holdfast.open(map, marker_holdfast);
+            });
+
+            var info_australasia ='<div id="content">'+
+                                '</div>'+
+                '<h1>Australasia</h1>'+
+                '<div id="bodyContent">'+
+                '<p><b>Australasia</b>, a bustiling Pan-Asian spot, is far from hidden underneath Spinningfields  </p>'+
+                '</div>';
+
+            var infowindow_australasia = new google.maps.InfoWindow({
+              content: info_australasia
+            });
+
+            var marker_australasia = new google.maps.Marker({
+              position: Australasia,
+              map: map,
+              title: 'Hold Fast'
+            });
+            marker_australasia.addListener('click', function() {
+              infowindow_australasia.open(map, marker_australasia);
+            });
+
+          }
+        </script>
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIyOtZbUXTTUOhASGVucw0tj55hVPI2L8&callback=initMap">
+        </script>
+      </body>
+    </html>

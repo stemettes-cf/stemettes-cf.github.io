@@ -52,6 +52,7 @@ p {
   text-align: center;
   font-size: 15px;
 }
+
 .centerbee {
     display: block;
     margin-left: auto;
@@ -287,7 +288,7 @@ p {
 	border-color: black;
 }
 
-#recordstore {
+.recordstore {
   color: tomato;
   text-decoration: none;
 }

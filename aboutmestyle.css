@@ -24,8 +24,14 @@
 }
 
 h4 {
-  font-family: 'Rubik', sans-serif;
-  color: gray;
+  font-family: 'Bungee', sans-serif;
+  color: black;
   text-align: center;
-  font-size: 50px;
+  font-size: 40px;
+}
+p {
+  font-family: 'Rubik', sans-serif;
+  color: black;
+  text-align: center;
+  font-size: 20px;
 }

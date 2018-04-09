@@ -1,9 +1,13 @@
+.container {
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
 .hexa, .hexa div {
   margin: 0 auto;
   transform-origin: 50% 50%;
   overflow: hidden;
   width: 300px;
-  height: 300px;
+  height: 300px;;
 }
 .hexa {
   width: 270px;
@@ -28,10 +32,12 @@ h4 {
   color: black;
   text-align: center;
   font-size: 40px;
+  padding-bottom: 10px;
 }
 p {
   font-family: 'Rubik', sans-serif;
   color: black;
   text-align: center;
   font-size: 20px;
+  padding-top: 10px;
 }

@@ -73,9 +73,12 @@ ng-controller="AppController as app">
             var epernay = {lat: 53.477494, lng: -2.248027};
             var hold_fast = {lat: 53.48180229999999, lng: -2.232596199999989};
             var Australasia = {lat: 53.48016809999999, lng: -2.249796500000002};
-            var otherbar = {lat: 53.4791595, lng: -2.3141051};
-            var uluru = {lat: -25.363, lng: 131.044};
-            var test={lat: -24.263, lng: 131.944};
+            var washouse = {lat: 53.484739, lng : -2.239548};
+            var trof = {lat: 53.484793, lng: -2.237965};
+            var mrcooper={lat: 53.477509, lng: -2.245274};
+            var liquorstore={lat: 53.483357, lng: -2.247286}
+
+
             var map = new google.maps.Map(document.getElementById('map'), {
               zoom: 16,
               center: myLatLng
@@ -179,6 +182,84 @@ ng-controller="AppController as app">
               infowindow_australasia.open(map, marker_australasia);
             });
 
+            var info_liquorstore ='<div id="content">'+
+                                '</div>'+
+                '<h1>The Liquor Store </h1>'+
+                '<div id="bodyContent">'+
+                '<p><b>The Liquor Store </b>, for the rare time the sun appears, this has the perfect beer garden </p>'+
+                '</div>';
+
+            var infowindow_liquorstore = new google.maps.InfoWindow({
+              content: info_liquorstore
+            });
+
+            var marker_liquorstore = new google.maps.Marker({
+              position: liquorstore,
+              map: map,
+              title: 'Liquor Store'
+            });
+            marker_liquorstore.addListener('click', function() {
+              infowindow_liquorstore.open(map, marker_liquorstore);
+            });
+
+            var info_mrc= '<div id="content">'+
+                                '</div>'+
+                '<h1>Mr Coopers House and Gardens</h1>'+
+                '<div id="bodyContent">'+
+                '<p><b>Mr Coopers house and gardens</b>, the perfect spot for gin lovers </p>'+
+                '</div>';
+
+            var infowindow_mrc = new google.maps.InfoWindow({
+              content: info_mrc
+            });
+
+            var marker_mrc = new google.maps.Marker({
+              position: mrcooper,
+              map: map,
+              title: 'Mr Cooper'
+            });
+            marker_mrc.addListener('click', function() {
+              infowindow_mrc.open(map, marker_mrc);
+            });
+            var info_trof ='<div id="content">'+
+                                '</div>'+
+                '<h1>Trof</h1>'+
+                '<div id="bodyContent">'+
+                '<p><b>Trof</b>, the top Vegan spot </p>'+
+                '</div>';
+
+            var infowindow_trof = new google.maps.InfoWindow({
+              content: info_trof
+            });
+
+            var marker_trof = new google.maps.Marker({
+              position: trof,
+              map: map,
+              title: 'Trof'
+            });
+            marker_trof.addListener('click', function() {
+              infowindow_trof.open(map, marker_trof);
+            });
+
+            var info_washouse ='<div id="content">'+
+                                '</div>'+
+                '<h1>The Washhouse</h1>'+
+                '<div id="bodyContent">'+
+                '<p><b>The Washhouse</b>, a hidden gem, worth seeking out for the cocktails  </p>'+
+                '</div>';
+
+            var infowindow_washouse = new google.maps.InfoWindow({
+              content: info_washouse
+            });
+
+            var marker_washouse = new google.maps.Marker({
+              position: washouse,
+              map: map,
+              title: 'The Washhouse'
+            });
+            marker_washouse.addListener('click', function() {
+              infowindow_washouse.open(map, marker_washouse);
+            });
           }
         </script>
         <script async defer

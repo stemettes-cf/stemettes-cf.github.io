@@ -159,10 +159,6 @@ p {
     height: calc(100vh - 50px);
     overflow-y: auto;
   }
-  .carousel-action .btn-primary {
-    background: none;
-    color: tomato;
-}
 .twitter_stuff {
   width: 0 auto;
   max-width: 500px;
@@ -252,7 +248,7 @@ p {
 }
 .carousel-action .btn-primary {
   background: none;
-	color: white;
+	color: black;
   font-style: bold;
   margin: auto;
   font-size: 15px;
@@ -261,7 +257,7 @@ p {
 .carousel-action .btn-primary:hover {
 	background: none;
   font-weight: bold;
-  color: tomato;
+  color: gray;
 }
 
 .carousel-indicators li, .carousel-indicators li.active {

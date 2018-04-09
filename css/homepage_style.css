@@ -75,10 +75,9 @@ p {
   height: 50px;
   margin: 0 auto;
   width: 600px;
+  top: 0;
   background-color: white;
-  position: center;
-  padding-top: none;
-  color: black;
+  position: fixed, center;
 }
 
 .nav > .nav-btn {

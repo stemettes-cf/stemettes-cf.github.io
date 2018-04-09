@@ -183,11 +183,11 @@ h6 {
 }
 .carousel .item img {
     width: auto;
-    margin: auto;
-    height: 525px;
-    max-height: 525px;
-    max-width: 100%;
+    margin: 0 auto;
     height: auto;
+    max-height: 425px;
+    max-width: 100%;
+    position: center;
 }
 .carousel .carousel-control {
 	  width: 50px;

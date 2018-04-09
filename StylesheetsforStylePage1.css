@@ -7,7 +7,6 @@ h1 {
   text-align: center;
   color: #48D1CC;
   font-size: 50px;
-  margin: 10px 20px 20px 0px;
 }
 h2 {
   font-family: 'Rubik', sans-serif;
@@ -33,6 +32,22 @@ p {
   color: black;
   text-align: center;
   font-size: 15px;
+  margin: 0 auto;
+}
+
+a {
+  color: tomato;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: rgb(255, 21, 0, 0.8);
+  color: white;
+  text-decoration: none;
+}
+.container_img {
+  padding: none;
+  margin: 0 auto:
 }
 /*padding of text*/
 div.col-sm-9 {
@@ -61,6 +76,10 @@ padding-right: 50px;
     width:100%;
     position: relative;
   }
+  p {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 
   /*Responsive Pictures*/
@@ -79,10 +98,6 @@ padding-right: 50px;
 
     }
   }
-
-
-
-
 
 
 /*hexagon*/

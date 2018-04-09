@@ -271,6 +271,6 @@ p {
 	border: tomato;
 }
 .carousel-indicators li.active {
-	background: white;
-	border-color: white;
+	background: black;
+	border-color: black;
 }

@@ -2,6 +2,11 @@
   margin: 0 auto;
   padding-bottom: 50px;
 }
+
+.part {
+  margin: 0 auto;
+  position: relative;
+}
 .hexa, .hexa div {
   margin: 0 auto;
   transform-origin: 50% 50%;

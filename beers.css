@@ -168,8 +168,8 @@ h4 {
 .carousel .item img {
     width: auto;
     margin: auto;
-    height: 325px;
-    max-height: 325px;
+    height: 525px;
+    max-height: 525px;
     max-width: 100%;
     height: auto;
 }

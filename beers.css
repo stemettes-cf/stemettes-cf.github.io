@@ -112,6 +112,9 @@ h6 {
   .toprow {
     max-width: 500px;
   }
+  .twitter_stuff {
+    width: 100%;
+  }
   .nav > .nav-btn {
     display: inline-block;
     position: absolute;
@@ -270,4 +273,9 @@ h6 {
 .recordstore {
   color: tomato;
   text-decoration: none;
+}
+
+.twitter_stuff {
+  margin: 0 auto;
+  width: 70%;
 }

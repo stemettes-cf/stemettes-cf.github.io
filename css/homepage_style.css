@@ -159,6 +159,9 @@ p {
     height: calc(100vh - 50px);
     overflow-y: auto;
   }
+  .carousel-action .btn-primary {
+    background: none;
+    color: tomato;
 }
 .twitter_stuff {
   width: 0 auto;
@@ -192,8 +195,8 @@ p {
 .carousel .item img {
     width: auto;
     margin: auto;
-    height: 425px;
-    max-height: 425px;
+    height: 525px;
+    max-height: 525px;
     max-width: 100%;
     height: auto;
     padding: 40px;

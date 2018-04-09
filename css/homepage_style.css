@@ -48,9 +48,9 @@ h4 {
 }
 p {
   font-family: 'Rubik', sans-serif;
-  color: #585858;
+  color: black;
   text-align: center;
-  font-size: 20px;
+  font-size: 15px;
 }
 .centerbee {
     display: block;
@@ -168,8 +168,8 @@ p {
 }
 
 /* slide show */
-.carousel{
-	margin: auto;
+.carousel {
+	margin: 0 auto;
   background: white;
   position: relative;
 }
@@ -190,9 +190,9 @@ p {
 }
 .carousel .item img {
     width: auto;
-    margin: auto;
-    height: 525px;
-    max-height: 525px;
+    margin: 0 auto;
+    height: 425px;
+    max-height: 425px;
     max-width: 100%;
     height: auto;
     padding: 40px;

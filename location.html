@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html
 lang=en
 ng="app"
@@ -7,12 +8,13 @@ ng-controller="AppController as app">
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
+
     <title>Bars by location</title>
     <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
+
       #map {
         height: 80%;
+        z-index: -2
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
@@ -21,7 +23,6 @@ ng-controller="AppController as app">
         padding: 0;
       }
     </style>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <!-- Load Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha256-xWeRKjzyg6bep9D1AsHzUPEWHbWMzlRc84Z0aG+tyms= sha512-mGIRU0bcPaVjr7BceESkC37zD6sEccxE+RJyQABbbKNe83Y68+PyPM5nrE1zvbQZkSHDCJEtnAcodbhlq2/EkQ==" crossorigin="anonymous">
     <!-- Load custom styles -->
@@ -59,10 +60,8 @@ ng-controller="AppController as app">
 
         <div id="map"></div>
         <script>
-
           // This example displays a marker at the center of Australia.
           // When the user clicks the marker, an info window opens.
-
           function initMap() {
             var myLatLng = {lat: 53.481685, lng: -2.243814};
             var cottonopolis = {lat: 53.4812296, lng: -2.2334459};
@@ -74,24 +73,19 @@ ng-controller="AppController as app">
             var trof = {lat: 53.484793, lng: -2.237965};
             var mrcooper={lat: 53.477509, lng: -2.245274};
             var liquorstore={lat: 53.483357, lng: -2.247286}
-
-
             var map = new google.maps.Map(document.getElementById('map'), {
               zoom: 16,
               center: myLatLng
             });
-
             var info_cottonopolis = '<div id="content">'+
                                 '</div>'+
                 '<h4>Cottonopolis</h4>'+
                 '<div id="bodyContent">'+
-                '<p>A nod to our industrial past</p>'+
+                '<p><b>Cottonopolis</b>, a nod to our industrial past in this NQ gem </p>'+
                 '</div>';
-
             var infowindow = new google.maps.InfoWindow({
               content: info_cottonopolis
             });
-
             var marker_cottonopolis = new google.maps.Marker({
               position: cottonopolis,
               map: map,
@@ -104,13 +98,11 @@ ng-controller="AppController as app">
                                 '</div>'+
                 '<h4>Mojo</h4>'+
                 '<div id="bodyContent">'+
-                '<p>The ultimate late night rock bar </p>'+
+                '<p><b>Mojo</b>, the ultimate late night rock bar of Manchester </p>'+
                 '</div>';
-
             var infowindow_mojo = new google.maps.InfoWindow({
               content: info_mojo
             });
-
             var marker_mojo = new google.maps.Marker({
               position: mojo,
               map: map,
@@ -119,18 +111,15 @@ ng-controller="AppController as app">
             marker_mojo.addListener('click', function() {
               infowindow_mojo.open(map, marker_mojo);
             });
-
             var info_epernay = '<div id="content">'+
                                 '</div>'+
                 '<h4>Epernay</h4>'+
                 '<div id="bodyContent">'+
-                '<p>For those seeking a fancier night </p>'+
+                '<p><b>Epernay</b>, a top rated champagne bar, for those seeking a fancier night </p>'+
                 '</div>';
-
             var infowindow_epernay = new google.maps.InfoWindow({
               content: info_epernay
             });
-
             var marker_epernay = new google.maps.Marker({
               position: epernay,
               map: map,
@@ -143,13 +132,11 @@ ng-controller="AppController as app">
                                 '</div>'+
                 '<h4>Hold Fast</h4>'+
                 '<div id="bodyContent">'+
-                '<p><b>Surprises around every corner</p>'+
+                '<p><b>Hold Fast</b>, a unique spot with suprises around every corner </p>'+
                 '</div>';
-
             var infowindow_holdfast = new google.maps.InfoWindow({
               content: info_holdfast
             });
-
             var marker_holdfast = new google.maps.Marker({
               position: hold_fast,
               map: map,
@@ -158,18 +145,15 @@ ng-controller="AppController as app">
             marker_holdfast.addListener('click', function() {
               infowindow_holdfast.open(map, marker_holdfast);
             });
-
             var info_australasia ='<div id="content">'+
                                 '</div>'+
                 '<h4>Australasia</h4>'+
                 '<div id="bodyContent">'+
-                '<p>Bustiling Pan-Asian spot </p>'+
+                '<p><b>Australasia</b>, a bustiling Pan-Asian spot, is far from hidden underneath Spinningfields  </p>'+
                 '</div>';
-
             var infowindow_australasia = new google.maps.InfoWindow({
               content: info_australasia
             });
-
             var marker_australasia = new google.maps.Marker({
               position: Australasia,
               map: map,
@@ -178,18 +162,15 @@ ng-controller="AppController as app">
             marker_australasia.addListener('click', function() {
               infowindow_australasia.open(map, marker_australasia);
             });
-
             var info_liquorstore ='<div id="content">'+
                                 '</div>'+
                 '<h4>The Liquor Store </h4>'+
                 '<div id="bodyContent">'+
-                '<p>Great summer spot </p>'+
+                '<p><b>The Liquor Store </b>, for the rare time the sun appears, this has the perfect beer garden </p>'+
                 '</div>';
-
             var infowindow_liquorstore = new google.maps.InfoWindow({
               content: info_liquorstore
             });
-
             var marker_liquorstore = new google.maps.Marker({
               position: liquorstore,
               map: map,
@@ -198,18 +179,15 @@ ng-controller="AppController as app">
             marker_liquorstore.addListener('click', function() {
               infowindow_liquorstore.open(map, marker_liquorstore);
             });
-
             var info_mrc= '<div id="content">'+
                                 '</div>'+
-                '<h4>Mr Coopers</h4>'+
+                '<h4>Mr Coopers House & Gardens</h4>'+
                 '<div id="bodyContent">'+
-                '<p><b>A gin lovers paradise </p>'+
+                '<p><b>Mr Coopers house and gardens</b>, the perfect spot for gin lovers </p>'+
                 '</div>';
-
             var infowindow_mrc = new google.maps.InfoWindow({
               content: info_mrc
             });
-
             var marker_mrc = new google.maps.Marker({
               position: mrcooper,
               map: map,
@@ -222,13 +200,11 @@ ng-controller="AppController as app">
                                 '</div>'+
                 '<h4>Trof</h4>'+
                 '<div id="bodyContent">'+
-                '<p>A top Vegan spot </p>'+
+                '<p><b>Trof</b>, the top Vegan spot </p>'+
                 '</div>';
-
             var infowindow_trof = new google.maps.InfoWindow({
               content: info_trof
             });
-
             var marker_trof = new google.maps.Marker({
               position: trof,
               map: map,
@@ -237,18 +213,15 @@ ng-controller="AppController as app">
             marker_trof.addListener('click', function() {
               infowindow_trof.open(map, marker_trof);
             });
-
             var info_washouse ='<div id="content">'+
                                 '</div>'+
                 '<h4>The Washhouse</h4>'+
                 '<div id="bodyContent">'+
-                '<p>A hidden gem</p>'+
+                '<p><b>A hidden gem, worth seeking out for the cocktails  </p>'+
                 '</div>';
-
             var infowindow_washouse = new google.maps.InfoWindow({
               content: info_washouse
             });
-
             var marker_washouse = new google.maps.Marker({
               position: washouse,
               map: map,

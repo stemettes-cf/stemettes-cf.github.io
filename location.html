@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html
 lang=en
 ng="app"
@@ -8,13 +7,13 @@ ng-controller="AppController as app">
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-
     <title>Bars by location</title>
     <style>
-
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
       #map {
         height: 80%;
-            }
+      }
       /* Optional: Makes the sample page fill the window. */
       html, body {
         height: 100%;
@@ -22,6 +21,7 @@ ng-controller="AppController as app">
         padding: 0;
       }
     </style>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <!-- Load Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha256-xWeRKjzyg6bep9D1AsHzUPEWHbWMzlRc84Z0aG+tyms= sha512-mGIRU0bcPaVjr7BceESkC37zD6sEccxE+RJyQABbbKNe83Y68+PyPM5nrE1zvbQZkSHDCJEtnAcodbhlq2/EkQ==" crossorigin="anonymous">
     <!-- Load custom styles -->
@@ -80,7 +80,7 @@ ng-controller="AppController as app">
                                 '</div>'+
                 '<h4>Cottonopolis</h4>'+
                 '<div id="bodyContent">'+
-                '<p><b>Cottonopolis</b>, a nod to our industrial past in this NQ gem </p>'+
+                '<p>A nod to our industrial past</p>'+
                 '</div>';
             var infowindow = new google.maps.InfoWindow({
               content: info_cottonopolis
@@ -97,7 +97,7 @@ ng-controller="AppController as app">
                                 '</div>'+
                 '<h4>Mojo</h4>'+
                 '<div id="bodyContent">'+
-                '<p><b>Mojo</b>, the ultimate late night rock bar of Manchester </p>'+
+                '<p>The ultimate late night rock bar </p>'+
                 '</div>';
             var infowindow_mojo = new google.maps.InfoWindow({
               content: info_mojo
@@ -114,7 +114,7 @@ ng-controller="AppController as app">
                                 '</div>'+
                 '<h4>Epernay</h4>'+
                 '<div id="bodyContent">'+
-                '<p><b>Epernay</b>, a top rated champagne bar, for those seeking a fancier night </p>'+
+                '<p>For those seeking a fancier night </p>'+
                 '</div>';
             var infowindow_epernay = new google.maps.InfoWindow({
               content: info_epernay
@@ -131,7 +131,7 @@ ng-controller="AppController as app">
                                 '</div>'+
                 '<h4>Hold Fast</h4>'+
                 '<div id="bodyContent">'+
-                '<p><b>Hold Fast</b>, a unique spot with suprises around every corner </p>'+
+                '<p><b>Surprises around every corner</p>'+
                 '</div>';
             var infowindow_holdfast = new google.maps.InfoWindow({
               content: info_holdfast
@@ -148,7 +148,7 @@ ng-controller="AppController as app">
                                 '</div>'+
                 '<h4>Australasia</h4>'+
                 '<div id="bodyContent">'+
-                '<p><b>Australasia</b>, a bustiling Pan-Asian spot, is far from hidden underneath Spinningfields  </p>'+
+                '<p>Bustiling Pan-Asian spot </p>'+
                 '</div>';
             var infowindow_australasia = new google.maps.InfoWindow({
               content: info_australasia
@@ -165,7 +165,7 @@ ng-controller="AppController as app">
                                 '</div>'+
                 '<h4>The Liquor Store </h4>'+
                 '<div id="bodyContent">'+
-                '<p><b>The Liquor Store </b>, for the rare time the sun appears, this has the perfect beer garden </p>'+
+                '<p>Great summer spot </p>'+
                 '</div>';
             var infowindow_liquorstore = new google.maps.InfoWindow({
               content: info_liquorstore
@@ -180,9 +180,9 @@ ng-controller="AppController as app">
             });
             var info_mrc= '<div id="content">'+
                                 '</div>'+
-                '<h4>Mr Coopers House & Gardens</h4>'+
+                '<h4>Mr Coopers</h4>'+
                 '<div id="bodyContent">'+
-                '<p><b>Mr Coopers house and gardens</b>, the perfect spot for gin lovers </p>'+
+                '<p><b>A gin lovers paradise </p>'+
                 '</div>';
             var infowindow_mrc = new google.maps.InfoWindow({
               content: info_mrc
@@ -199,7 +199,7 @@ ng-controller="AppController as app">
                                 '</div>'+
                 '<h4>Trof</h4>'+
                 '<div id="bodyContent">'+
-                '<p><b>Trof</b>, the top Vegan spot </p>'+
+                '<p>A top Vegan spot </p>'+
                 '</div>';
             var infowindow_trof = new google.maps.InfoWindow({
               content: info_trof
@@ -216,7 +216,7 @@ ng-controller="AppController as app">
                                 '</div>'+
                 '<h4>The Washhouse</h4>'+
                 '<div id="bodyContent">'+
-                '<p><b>A hidden gem, worth seeking out for the cocktails  </p>'+
+                '<p>A hidden gem</p>'+
                 '</div>';
             var infowindow_washouse = new google.maps.InfoWindow({
               content: info_washouse

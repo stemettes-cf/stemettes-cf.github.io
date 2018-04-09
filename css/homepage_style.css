@@ -63,6 +63,16 @@ p {
     padding-bottom: none;
     padding-top: 5px;
 }
+.eventpics {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  width: auto;
+  height: auto;
+  size: 100%
+  padding-bottom: 30px;
+}
 .nav-links {
   text-align: center;
 }
@@ -159,12 +169,13 @@ p {
     height: calc(100vh - 50px);
     overflow-y: auto;
   }
-.twitter_stuff {
+.container_twitt {
   width: auto;
   max-width: 600px;
   height: auto;
-  padding-top: none;
-  margin: 0 auto;
+  padding: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* slide show */
@@ -172,6 +183,7 @@ p {
 	margin: 0 auto;
   background: white;
   position: center:
+  padding-top: 10px;
 }
 .carousel:after {
 	  content: "";
@@ -195,7 +207,7 @@ p {
     max-height: 525px;
     max-width: 100%;
     height: auto;
-    padding: 40px;
+    padding: 10px;
 }
 .carousel .carousel-control {
 	  width: 50px;
@@ -273,4 +285,9 @@ p {
 .carousel-indicators li.active {
 	background: black;
 	border-color: black;
+}
+
+#recordstore {
+  color: tomato;
+  text-decoration: none;
 }

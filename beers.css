@@ -183,7 +183,7 @@ h6 {
 }
 .carousel .item img {
     width: auto;
-    margin: 0 auto;
+    margin: auto;
     height: 525px;
     max-height: 525px;
     max-width: 100%;
@@ -264,4 +264,7 @@ h6 {
 .carousel-indicators li.active {
 	background: black;
 	border-color: black;
+}
+#recordstore {
+  text-decoration: none;
 }

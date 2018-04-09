@@ -22,7 +22,7 @@ h3 {
   font-size: 20px;
 }
 h4 {
-  font-family: 'Bungee Shade', cursive;
+  font-family: 'Bungee', cursive;
   text-align: center;
   color: #48D1CC;
   font-size: 30px;
@@ -30,9 +30,19 @@ h4 {
 }
 p {
   font-family: 'Rubik', sans-serif;
-  color: white;
+  color: black;
   text-align: center;
   font-size: 15px;
+}
+a {
+  color: tomato;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: rgb(255, 21, 0, 0.8);
+  color: white;
+  text-decoration: none;
 }
 /*padding of text*/
 div.col-sm-9 {
@@ -61,6 +71,11 @@ padding-right: 50px;
     width:100%;
     position: relative;
   }
+  p {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
 }
 
   /*Responsive Pictures*/
@@ -79,7 +94,6 @@ padding-right: 50px;
 
     }
   }
-
 
 
 

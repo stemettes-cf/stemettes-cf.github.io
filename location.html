@@ -1,71 +1,269 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Rubik|Work+Sans" rel="stylesheet">
+<html
+lang=en
+ng="app"
+ng-controller="AppController as app">
 
-</head>
-<body>
-  <header>
-    <nav role="navigation">
-     <div id="menuToggle">
-      <input type="checkbox" />
-       <span></span>
-       <span></span>
-       <span></span>
-      <ul id="menu">
-        <a href="index.html"><li>HOME</li></a>
-        <a href="about.html"><li>ABOUT</li></a>
-        <a href="#"><li>CONTACT</li></a>
-      </ul>
-     </div>
-    </nav>
-    <h1> THIRSTY BEE </h1>
-  </header>
-  <h3>BEST BARS BY LOCATION</h3>
-  <div id="map" class="center-div" style="height: 600px; width: 900px;" align="center">
-</div>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Bars by location</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 80%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!-- Load Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha256-xWeRKjzyg6bep9D1AsHzUPEWHbWMzlRc84Z0aG+tyms= sha512-mGIRU0bcPaVjr7BceESkC37zD6sEccxE+RJyQABbbKNe83Y68+PyPM5nrE1zvbQZkSHDCJEtnAcodbhlq2/EkQ==" crossorigin="anonymous">
+    <!-- Load custom styles -->
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Rubik|Work+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/hex-grid.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel='stylesheet' href='css/homepage_style.css'>
+  </head>
+  <body>
+    <div class="nav">
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+      <input type="checkbox" id="nav-check">
+      <div class="nav-links">
+        <a href="index.html" target="_blank">HOME</a>
+        <a href="about.html" target="_blank">ABOUT</a>
+        <a href="style.html" target="_blank">BY STYLE</a>
+        <a href="BarsByRating.html" target="_blank">BY RATING</a>
+        <a href="location.html" target="_blank">BY MAP</a>
+        <a href="area.html" target="_blank">BY AREA</a>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <img src="https://i.pinimg.com/originals/20/8c/eb/208ceb6083285b22ae01244f34abe1a0.jpg" class="centerbee">
+        </div>
+      </div>
+    </div>
+   </div>
 
-<script src="script.js"></script>
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiq9nHF6YyCNdu7HXyDbnLF1S377Celfw&callback=initMap"></script>
-<script type="text/javascript">
-    var locations = [
-      ['Bondi Beach', 53.485539, -2.235233, 4],
-      ['Coogee Beach', 53.484120, -2.234268, 5],
-      ['Cronulla Beach', 53.486801, -2.240898, 3],
-      ['Manly Beach', 53.480292, -2.241431, 2],
-      ['Maroubra Beach', 53.479934, -2.249456, 1]
-    ];
+  <body>
 
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 10,
-      center: new google.maps.LatLng(53.485539, -2.235233),
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    });
+        <div id="map"></div>
+        <script>
 
-    var infowindow = new google.maps.InfoWindow();
+          // This example displays a marker at the center of Australia.
+          // When the user clicks the marker, an info window opens.
 
-    var marker, i;
+          function initMap() {
+            var myLatLng = {lat: 53.481685, lng: -2.243814};
+            var cottonopolis = {lat: 53.4812296, lng: -2.2334459};
+            var mojo = {lat: 53.481272, lng: -2.24981};
+            var epernay = {lat: 53.477494, lng: -2.248027};
+            var hold_fast = {lat: 53.48180229999999, lng: -2.232596199999989};
+            var Australasia = {lat: 53.48016809999999, lng: -2.249796500000002};
+            var washouse = {lat: 53.484739, lng : -2.239548};
+            var trof = {lat: 53.484793, lng: -2.237965};
+            var mrcooper={lat: 53.477509, lng: -2.245274};
+            var liquorstore={lat: 53.483357, lng: -2.247286}
 
-    for (i = 0; i < locations.length; i++) {
-      marker = new google.maps.Marker({
-        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-        map: map
-      });
 
-      google.maps.event.addListener(marker, 'click', (function(marker, i) {
-        return function() {
-          infowindow.setContent(locations[i][0]);
-          infowindow.open(map, marker);
-        }
-      })(marker, i));
-    }
-  </script>
-</body>
-</html>
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 16,
+              center: myLatLng
+            });
+
+            var info_cottonopolis = '<div id="content">'+
+                                '</div>'+
+                '<h1>Cottonopolis</h1>'+
+                '<div id="bodyContent">'+
+                '<p><b>Cottonopolis</b>, a nod to our industrial past in this NQ gem </p>'+
+                '</div>';
+
+            var infowindow = new google.maps.InfoWindow({
+              content: info_cottonopolis
+            });
+
+            var marker_cottonopolis = new google.maps.Marker({
+              position: cottonopolis,
+              map: map,
+              title: 'Cottonopolis'
+            });
+            marker_cottonopolis.addListener('click', function() {
+              infowindow.open(map, marker_cottonopolis);
+            });
+            var info_mojo ='<div id="content">'+
+                                '</div>'+
+                '<h1>Mojo</h1>'+
+                '<div id="bodyContent">'+
+                '<p><b>Mojo</b>, the ultimate late night rock bar of Manchester </p>'+
+                '</div>';
+
+            var infowindow_mojo = new google.maps.InfoWindow({
+              content: info_mojo
+            });
+
+            var marker_mojo = new google.maps.Marker({
+              position: mojo,
+              map: map,
+              title: 'Mojo'
+            });
+            marker_mojo.addListener('click', function() {
+              infowindow_mojo.open(map, marker_mojo);
+            });
+
+            var info_epernay = '<div id="content">'+
+                                '</div>'+
+                '<h1>Epernay</h1>'+
+                '<div id="bodyContent">'+
+                '<p><b>Epernay</b>, a top rated champagne bar, for those seeking a fancier night </p>'+
+                '</div>';
+
+            var infowindow_epernay = new google.maps.InfoWindow({
+              content: info_epernay
+            });
+
+            var marker_epernay = new google.maps.Marker({
+              position: epernay,
+              map: map,
+              title: 'Epernay'
+            });
+            marker_epernay.addListener('click', function() {
+              infowindow_epernay.open(map, marker_epernay);
+            });
+            var info_holdfast ='<div id="content">'+
+                                '</div>'+
+                '<h1>Hold Fast</h1>'+
+                '<div id="bodyContent">'+
+                '<p><b>Hold Fast</b>, a unique spot with suprises around every corner </p>'+
+                '</div>';
+
+            var infowindow_holdfast = new google.maps.InfoWindow({
+              content: info_holdfast
+            });
+
+            var marker_holdfast = new google.maps.Marker({
+              position: hold_fast,
+              map: map,
+              title: 'Hold Fast'
+            });
+            marker_holdfast.addListener('click', function() {
+              infowindow_holdfast.open(map, marker_holdfast);
+            });
+
+            var info_australasia ='<div id="content">'+
+                                '</div>'+
+                '<h1>Australasia</h1>'+
+                '<div id="bodyContent">'+
+                '<p><b>Australasia</b>, a bustiling Pan-Asian spot, is far from hidden underneath Spinningfields  </p>'+
+                '</div>';
+
+            var infowindow_australasia = new google.maps.InfoWindow({
+              content: info_australasia
+            });
+
+            var marker_australasia = new google.maps.Marker({
+              position: Australasia,
+              map: map,
+              title: 'Hold Fast'
+            });
+            marker_australasia.addListener('click', function() {
+              infowindow_australasia.open(map, marker_australasia);
+            });
+
+            var info_liquorstore ='<div id="content">'+
+                                '</div>'+
+                '<h1>The Liquor Store </h1>'+
+                '<div id="bodyContent">'+
+                '<p><b>The Liquor Store </b>, for the rare time the sun appears, this has the perfect beer garden </p>'+
+                '</div>';
+
+            var infowindow_liquorstore = new google.maps.InfoWindow({
+              content: info_liquorstore
+            });
+
+            var marker_liquorstore = new google.maps.Marker({
+              position: liquorstore,
+              map: map,
+              title: 'Liquor Store'
+            });
+            marker_liquorstore.addListener('click', function() {
+              infowindow_liquorstore.open(map, marker_liquorstore);
+            });
+
+            var info_mrc= '<div id="content">'+
+                                '</div>'+
+                '<h1>Mr Coopers House and Gardens</h1>'+
+                '<div id="bodyContent">'+
+                '<p><b>Mr Coopers house and gardens</b>, the perfect spot for gin lovers </p>'+
+                '</div>';
+
+            var infowindow_mrc = new google.maps.InfoWindow({
+              content: info_mrc
+            });
+
+            var marker_mrc = new google.maps.Marker({
+              position: mrcooper,
+              map: map,
+              title: 'Mr Cooper'
+            });
+            marker_mrc.addListener('click', function() {
+              infowindow_mrc.open(map, marker_mrc);
+            });
+            var info_trof ='<div id="content">'+
+                                '</div>'+
+                '<h1>Trof</h1>'+
+                '<div id="bodyContent">'+
+                '<p><b>Trof</b>, the top Vegan spot </p>'+
+                '</div>';
+
+            var infowindow_trof = new google.maps.InfoWindow({
+              content: info_trof
+            });
+
+            var marker_trof = new google.maps.Marker({
+              position: trof,
+              map: map,
+              title: 'Trof'
+            });
+            marker_trof.addListener('click', function() {
+              infowindow_trof.open(map, marker_trof);
+            });
+
+            var info_washouse ='<div id="content">'+
+                                '</div>'+
+                '<h1>The Washhouse</h1>'+
+                '<div id="bodyContent">'+
+                '<p><b>The Washhouse</b>, a hidden gem, worth seeking out for the cocktails  </p>'+
+                '</div>';
+
+            var infowindow_washouse = new google.maps.InfoWindow({
+              content: info_washouse
+            });
+
+            var marker_washouse = new google.maps.Marker({
+              position: washouse,
+              map: map,
+              title: 'The Washhouse'
+            });
+            marker_washouse.addListener('click', function() {
+              infowindow_washouse.open(map, marker_washouse);
+            });
+          }
+        </script>
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIyOtZbUXTTUOhASGVucw0tj55hVPI2L8&callback=initMap">
+        </script>
+      </body>
+    </html>

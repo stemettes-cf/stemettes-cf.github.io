@@ -160,8 +160,8 @@ p {
     overflow-y: auto;
   }
 .twitter_stuff {
-  width: 0 auto;
-  max-width: 500px;
+  width: auto;
+  max-width: 600px;
   height: auto;
   padding-top: none;
   margin: 0 auto;
@@ -171,7 +171,7 @@ p {
 .carousel {
 	margin: 0 auto;
   background: white;
-  position: relative;
+  position: center:
 }
 .carousel:after {
 	  content: "";
@@ -191,8 +191,8 @@ p {
 .carousel .item img {
     width: auto;
     margin: 0 auto;
-    height: 425px;
-    max-height: 425px;
+    height: 525px;
+    max-height: 525px;
     max-width: 100%;
     height: auto;
     padding: 40px;
@@ -209,6 +209,7 @@ p {
 }
 .carousel .carousel-control i {
     font-size: 41px;
+    color: white;
 }
 .carousel-caption h3, .carousel-caption p {
 	color: #fff;
@@ -222,6 +223,7 @@ p {
 	padding: 12px 24px;
 	font-size: 20px;
 	text-transform: uppercase;
+  color: white;
   font-family: 'Rubik', sans-serif;
 }
 .carousel-caption p {
@@ -229,6 +231,7 @@ p {
 	padding: 10px 20px;
 	font-size: 15px;
 	font-weight: 300;
+  color: white;
   font-family: 'Rubik', sans-serif;
 }
 
@@ -248,16 +251,13 @@ p {
 }
 .carousel-action .btn-primary {
   background: none;
-	color: black;
-  font-style: bold;
+	color: white;
   margin: auto;
-  font-size: 15px;
-  font-family: 'Rubik', sans-serif;
 }
 .carousel-action .btn-primary:hover {
 	background: none;
   font-weight: bold;
-  color: gray;
+  color: tomato;
 }
 
 .carousel-indicators li, .carousel-indicators li.active {

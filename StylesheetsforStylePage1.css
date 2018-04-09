@@ -45,6 +45,17 @@ a:hover {
   color: white;
   text-decoration: none;
 }
+.centerbee {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    width: 100px;
+    height: auto;
+    size: 50%
+    padding-bottom: none;
+    padding-top: none;
+}
 .container_img {
   padding: none;
   margin: 0 auto:

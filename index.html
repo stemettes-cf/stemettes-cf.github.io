@@ -32,12 +32,12 @@
     </div>
     <input type="checkbox" id="nav-check">
     <div class="nav-links">
-      <a href="index.html" target="_blank">HOME</a>
-      <a href="about.html" target="_blank">ABOUT</a>
-      <a href="style.html" target="_blank">BY STYLE</a>
-      <a href="rating.html" target="_blank">BY RATING</a>
-      <a href="location.html" target="_blank">BY MAP</a>
-      <a href="area.html" target="_blank">BY AREA</a>
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="test_slide.html">BY STYLE</a>
+      <a href="Ratingv2.html">BY RATING</a>
+      <a href="location.html">BY MAP</a>
+      <a href="area.html">BY AREA</a>
     </div>
   </div>
   <div class="container">
@@ -45,7 +45,7 @@
       <div class="col">
         <img src="https://i.pinimg.com/originals/20/8c/eb/208ceb6083285b22ae01244f34abe1a0.jpg" class="centerbee">
         <h1 class="text-center"> THIRSTY BEE </h1>
-        <h3 class="text-center">the definitive mcr bar guide</h3>
+        <h3 class="text-center">the definitive guide to manchester's bars</h3>
       </div>
     </div>
   </div>
@@ -55,7 +55,7 @@
      <div ng-repeat="item in app.items" class="grid-item repeat-animation">
        <div class="inner">
          <div class="inner-inner" ng-style="{ 'background-image': 'url(https://www.telegraph.co.uk/content/dam/Travel/hotels/europe/united-kingdom/Hotels%20-%20England/manchester/principal-manchester-winter-garden-l-xlarge.jpg)', 'background-size': '100%' }">
-           <a ref="style.html" class="grid-info">
+           <a ref="BarsByStyle.html" class="grid-info">
              <div class ="inner-text">
                <div class="inner-text-inner">
                  <h2>STYLE</h2>
@@ -82,8 +82,8 @@
      </div><!-- /.grid-item -->
      <div ng-repeat="item in app.items" class="grid-item repeat-animation">
        <div class="inner">
-         <div class="inner-inner" ng-style="{ 'background-image': 'url(http://www.camdentownbrewery.com/content/news/_820x410/cloudwater2.jpg)', 'background-size': '80%' }">
-           <a href="rating.html" class="grid-info">
+         <div class="inner-inner" ng-style="{ 'background-image': 'url(https://img.etsystatic.com/il/833145/1342107533/il_570xN.1342107533_svnp.jpg?version=0)', 'background-size': '50%' }">
+           <a href="Ratingv3.html" class="grid-info">
              <div class ="inner-text">
                <div class="inner-text-inner">
                  <h2>RATING</h2>
@@ -110,10 +110,12 @@
      </div><!-- /.grid-item -->
      <div ng-repeat="item in app.items" class="grid-item repeat-animation">
        <div class="inner">
-         <div class="inner-inner" ng-style="{ 'background-image': 'url(https://brand.campaign.adidas.com/Images/us-ss17-glp-revamp-teaserlist-background-desktop_tcm56-126765.jpg?locale=pt_PT&device=desktop&version=1)', 'background-size': '50%' }">
-           <a href="location.html" class="grid-info">
+         <div class="inner-inner" ng-style="{ 'background-image': 'url(http://draftmag.com/wp-content/uploads/2016/07/Web_20160712_02_Cloudwater_DIPAv4andDIPAv5-1080x641.jpg)', 'background-size': '80%' }">
+           <a href="beers_page.html" class="grid-info">
              <div class ="inner-text">
                <div class="inner-text-inner">
+                 <h2>BEER LOVER?</h2>
+                 <p>check out our mcr brew tap guide</p>
                </div><!-- /.inner-text-inner -->
              </div><!-- /.inner-text -->
            </a><!-- /.grid-info -->
@@ -195,5 +197,14 @@
    })(); // end module
 
  </script>
+ <div class="container_twit">
+   <div class = "row">
+     <div class="col-md-12">
+       <h4>NEWS AND DEALS</h4>
+       <p>Check out the latest manchester news and deals from MCR confidential's feed below </p>
+ <div class ="twitter_stuff">
+   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+   <a class="twitter-timeline" href="https://twitter.com/mcrconfidential?ref_src=twsrc%5Etfw">Tweets by mcrconfidential</a>
+ </div>
 </body>
 </html>

@@ -223,12 +223,14 @@ p {
 	padding: 12px 24px;
 	font-size: 20px;
 	text-transform: uppercase;
+  font-family: 'Rubik', sans-serif;
 }
 .carousel-caption p {
 	background: tomato;
 	padding: 10px 20px;
 	font-size: 15px;
 	font-weight: 300;
+  font-family: 'Rubik', sans-serif;
 }
 
 .carousel-action {
@@ -251,6 +253,7 @@ p {
   font-style: bold;
   margin: auto;
   font-size: 15px;
+  font-family: 'Rubik', sans-serif;
 }
 .carousel-action .btn-primary:hover {
 	background: none;
